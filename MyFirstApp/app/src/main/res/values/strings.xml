@@ -2,4 +2,6 @@
     <string name="app_name">My First App</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiaWpkZWxlb24iLCJhIjoiY2pwdWYzNmlmMGczczQyb2c2NTU2Y3BsdCJ9.SsVp-aIk4sDpqxu7CjD-hQ</string>
+
 </resources>

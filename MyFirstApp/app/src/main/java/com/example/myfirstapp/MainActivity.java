@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.mapbox.mapboxsdk.Mapbox;
+
 /*Main activity, entry point for the app. When app is
  * built, system launches instance of this Activity
  * and loads its layout */
@@ -16,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); //lmao
+
+        Mapbox.getInstance(getApplicationContext(), getString(R.string.mapbox_access_token));
     }
 
     /** Called when the user taps the Send button
