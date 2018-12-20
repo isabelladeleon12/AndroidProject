@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 MarkerOptions mOp = new MarkerOptions().position(coords);
                 markerList.add(mOp);
 
+                //attempt at revitalizing pins
                 for (MarkerOptions mop : markerList) {
                     mapfitMap.addMarker(mop);
                 }
