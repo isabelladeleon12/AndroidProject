@@ -38,4 +38,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onActivityResult() {
+
+    }
 }
