@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
                         markerList.add(mOp);
                         Marker marker1 = mapfitMap.addMarker(mOp);
                         marker1.setIcon(MapfitMarker.RESTAURANT);
-
-
                     }
                 });
 
@@ -76,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(mapView.getContext(), MarkerInfo.class);
                         intent.putExtra("Name", "Tutta Bella");
                         intent.putExtra("Rating", "3.5");
-                        startActivity(intent);
+                        startActivityForResult(intent, 1);
                     }
                 });
             }
@@ -87,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         mapView.onDestroy();
-
     }
 
     @Override
@@ -96,16 +93,20 @@ public class MainActivity extends AppCompatActivity {
         mapView.onLowMemory();
     }
 
-
-    /*@Override
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if(resultCode == RESULT_OK) {
-                String strEditText = data.getStringExtra("editTextValue");
+                String strEditText = data.getStringExtra("name");
+                System.out.println(strEditText);
             }
         }
-    }*/
+
+        LatLng coords = new LatLng(30.744023, -43.993150);
+        MarkerOptions mOp2 = new MarkerOptions().position(coords);
+        markerList.add(mOp2);
+    }
 
     //sleep code
     /*final Handler handler = new Handler();
